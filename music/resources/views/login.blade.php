@@ -71,17 +71,17 @@
                         <!-- Sign In Form -->
                         <!-- jQuery Validation functionality is initialized with .js-validation-signin class in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js -->
                         <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                        <form class="js-validation-signin px-4" action="{{route('login')}}"  id="loginForm" method="POST">
+                        <form class="js-validation-signin px-4" action="/login"  id="loginForm" method="POST">
                             @csrf
                             <div class="form-floating mb-4">
-                                <input type="email" class="form-control" id="login-username"
-                                       value="{{old('login-username')}}" name="login-username"
+                                <input type="email" class="form-control" id="email"
+                                       value="{{old('login-email')}}" name="email"
                                        placeholder="">
-                                <label class="form-label" for="login-username">E Posta Adresiniz</label>
+                                <label class="form-label" for="login-email">E Posta Adresiniz</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" class="form-control" id="login-password"
-                                       value="{{old('login-password')}}" name="login-password"
+                                <input type="password" class="form-control" id="password"
+                                       value="{{old('login-password')}}" name="password"
                                        placeholder="">
                                 <label class="form-label" for="login-password">Şifre</label>
                             </div>
@@ -137,8 +137,8 @@
     $('#btnLogin').click(
         function () {
             event.preventDefault();
-            let email = document.querySelector('#login-username').value;
-            let password = document.querySelector('#login-password').value;
+            let email = document.querySelector('#email').value;
+            let password = document.querySelector('#password').value;
 
 
             if (email.trim()==''){

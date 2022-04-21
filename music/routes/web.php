@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 // Example Routes
 Route::get('/',[loginController::class, 'index']);
+Route::get('/dashboard',[loginController::class, 'dashboard']);
+
