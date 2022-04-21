@@ -10,14 +10,12 @@ use Illuminate\Support\Facades\Hash;
 class loginController extends Controller
 {
     public  function index(){
-       // return view('login');
+        return view('login');
     }
     public function dashboard(Request $request)
     {
-        
-       
         $user = User::where('email', $request->email)->first();
-        
+
         return view('dashboard',compact('user'));
     }
 }
