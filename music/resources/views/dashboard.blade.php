@@ -1,6 +1,5 @@
 @extends('layouts.backend')
-@php
-@endphp
+
 @section('content')
   <!-- Page Content -->
   <div class="content">

@@ -119,6 +119,10 @@
       <excludeFolder url="file://$MODULE_DIR$/music/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/music/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/music/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/music/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/music/vendor/rap2hpoutre/laravel-log-viewer" />
+      <excludeFolder url="file://$MODULE_DIR$/music/vendor/barryvdh/laravel-debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/music/vendor/symfony/debug" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
