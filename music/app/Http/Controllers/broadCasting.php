@@ -18,6 +18,11 @@ class broadCasting extends Controller
 
     public function stepone(Request  $request){
         dd($request->post());
+        if ($request->post()){}
+
+
+    } public function stepTwo(Request  $request){
+        return 'test';
     }
     /**
      * Show the form for creating a new resource.
