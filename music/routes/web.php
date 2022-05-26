@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [loginController::class, 'index']);
 Route::get('/dashboard', [loginController::class, 'dashboard']);
 Route::get('/broadCasting', [\App\Http\Controllers\broadCasting::class, 'index'])->name('broadCasting');
-Route::post('/broadCasting', [\App\Http\Controllers\broadCasting::class, 'stepone'])->name('broadCasting.post');
+//Route::post('/broadCasting', [\App\Http\Controllers\broadCasting::class, 'stepone'])->name('broadCasting.post');
 
 
 

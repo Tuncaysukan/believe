@@ -13,7 +13,8 @@ class broadCasting extends Controller
      */
     public function index()
     {
-        return view('pages.broadCasting.broadCasting');
+
+        return view('pages.broadCasting.broadcasting');
     }
 
     public function stepone(Request  $request){
@@ -89,4 +90,6 @@ class broadCasting extends Controller
     {
         //
     }
+
+
 }

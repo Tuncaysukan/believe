@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 @section('content')
 
-    <main id="main-container">
+    <main id="main-container w-auto">
         <!-- Page Content -->
         <div class="content">
             <h2 class="content-heading">Yayın Oluşturma </h2>
@@ -12,16 +12,17 @@
 
                 </div>
                 <div class="block-content">
-                    <form action="{{route('broadCasting.post')}}" id="broadForm" method="POST">
+                    <form action="" method="">
                         @csrf
-                        <div class="row ">
+                        <div class="row">
                             <div class="col-lg-8 col-xl-12">
                                 <div class="mb-4">
                                     <div class="mb-4" data-select2-id="5">
                                         <label class="form-label" for="val-select2">Yayın Türünü Seçin<span
                                                 class="text-danger">*</span></label>
                                         <select id="test"
-                                                class="js-select2 form-select js-select2-enabled select2-hidden-accessible valid">
+                                                class="js-select2 form-select js-select2-enabled select2-hidden-accessible valid "
+                                                onchange="brodcasting()">
                                             <option data-select2-id="2">Seçim Yapınız</option>
                                             <option value="zil" id="zil" data-select2-id="1">Zil Sesi</option>
                                             <option value="ses" id="ses" data-select2-id="2">Ses</option>
@@ -34,9 +35,10 @@
                                                 class="text-danger">*</span></label>
                                         <select id="test"
                                                 class="js-select2 form-select js-select2-enabled select2-hidden-accessible valid">
-                                            <option data-select2-id="2">Seçim Yapınız</option>
+                                            <option onchange="brodcasting()" data-select2-id="2">Seçim Yapınız</option>
                                             <option value="zil" id="tur" data-select2-id="1">Her Hangi Bir Tür</option>
-                                            <option value="ses" id="bati" data-select2-id="2">Batı Klasik Müziği</option>
+                                            <option value="ses" id="bati" data-select2-id="2">Batı Klasik Müziği
+                                            </option>
                                             <option value="ses" id="jaz" data-select2-id="2">Jazz</option>
 
                                         </select>
@@ -52,88 +54,246 @@
                                         <input type="hidden" value="song">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="content">
 
 
-                                <div class="col-12">
-                                    <!-- Vertical Block Tabs Default Style With Extra Info -->
-                                    <div class="block block-rounded row g-0 overflow-hidden">
-                                        <ul class="nav nav-tabs nav-tabs-block flex-md-column col-md-4 col-xxl-2 rounded-0" role="tablist">
-                                            <li class="nav-item d-md-flex flex-md-column">
-                                                <button class="nav-link fs-sm text-md-start rounded-0" id="btabs-vertical-info-home-tab" data-bs-toggle="tab" data-bs-target="#btabs-vertical-info-home" role="tab" aria-controls="btabs-vertical-info-home" aria-selected="false">
-                                                    <i class="fa fa-fw fa-home opacity-50 me-1 d-none d-sm-inline-block"></i>
-                                                    <span>Yayın</span>
-                                                    <p class="d-none d-md-block fs-xs fw-medium opacity-75 mt-md-2 mb-0">
-                                                        Yeni Sanatçıları seçmek  için
-                                                    </p>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item d-md-flex flex-md-column">
-                                                <button class="nav-link fs-sm text-md-start rounded-0" id="btabs-vertical-info-profile-tab" data-bs-toggle="tab" data-bs-target="#btabs-vertical-info-profile" role="tab" aria-controls="btabs-vertical-info-profile" aria-selected="false">
-                                                    <i class="fa fa-fw fa-user-circle opacity-50 me-1 d-none d-sm-inline-block"></i>
-                                                    <span>Yükle</span>
-                                                    <p class="d-none d-md-block fs-xs fw-medium opacity-75 mt-md-2 mb-0">
-                                                        Parça Yükleme  Alanı
-                                                    </p>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item d-md-flex flex-md-column">
-                                                <button class="nav-link fs-sm text-md-start rounded-0 active" id="btabs-vertical-info-settings-tab" data-bs-toggle="tab" data-bs-target="#btabs-vertical-info-settings" role="tab" aria-controls="btabs-vertical-info-settings" aria-selected="true">
-                                                    <i class="fa fa-fw fa-cog opacity-50 me-1 d-none d-sm-inline-block"></i>
-                                                    <span>Parça Düzenle</span>
-                                                    <p class="d-none d-md-block fs-xs fw-medium opacity-75 mt-md-2 mb-0">
-                                                        Parça  Düzenleme Alanı
-                                                    </p>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content col-md-8 col-xxl-10">
-                                            <div class="block-content tab-pane" id="btabs-vertical-info-home" role="tabpanel" aria-labelledby="btabs-vertical-info-home-tab">
-                                                <h4 class="fw-semibold">Home Content</h4>
-                                                <p class="fs-sm">
-                                                    Enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget! Nulla quis ligula ipsum.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget! Nulla quis ligula ipsum.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget! Nulla quis ligula ipsum.
-                                                </p>
+                                <!-- Block Tabs -->
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                                aria-selected="true">Yayın
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="down-tab" data-bs-toggle="tab"
+                                                data-bs-target="#down" type="button" role="tab"
+                                                aria-controls="down" aria-selected="false">Yükle
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="song-tab" data-bs-toggle="tab"
+                                                data-bs-target="#song" type="button" role="tab"
+                                                aria-controls="song" aria-selected="false">Parçaları Düzenle
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="country-tab" data-bs-toggle="tab"
+                                                data-bs-target="#country" type="button" role="tab"
+                                                aria-controls="country" aria-selected="false">Bölgeler
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="share-tab" data-bs-toggle="tab"
+                                                data-bs-target="#share" type="button" role="tab"
+                                                aria-controls="share" aria-selected="false">Yayın
+                                            Tarihi
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="promosyon-tab" data-bs-toggle="tab"
+                                                data-bs-target="#promosyon" type="button" role="tab"
+                                                aria-controls="promosyon" aria-selected="false">Promosyon
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="send-tab" data-bs-toggle="tab"
+                                                data-bs-target="#send" type="button" role="tab"
+                                                aria-controls="send" aria-selected="false">Gönderim
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                         aria-labelledby="home-tab">
+
+                                        <div class="row text-center">
+                                            <div class="col-2">
+                                                <div class="block block-rounded">
+                                                    <div class="block-content">
+                                                        <input class="form-control" type="file" id="imgUpload">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="block-content tab-pane" id="btabs-vertical-info-profile" role="tabpanel" aria-labelledby="btabs-vertical-info-profile-tab">
-                                                <h4 class="fw-semibold">Profile Content</h4>
-                                                <p class="fs-sm">
-                                                    Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt.
-                                                </p>
+                                            <div class="col-5">
+                                                <div class="block block-rounded">
+                                                    <div class="block-content">
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Album Adı *
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Album Adı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Versiyon /Alt Yazı
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Versiyon /Alt Yazı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Birincil Sanatçı
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Birincil Sanatçı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Düet
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Düet"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Tarz</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label"
+                                                                   for="example-select-floating">Tarz</label>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Alt Tarz</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label" for="example-select-floating">Alt
+                                                                Tarz</label>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Plak Şirketi</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label" for="example-select-floating">Plak
+                                                                Şirketi</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="block-content tab-pane active" id="btabs-vertical-info-settings" role="tabpanel" aria-labelledby="btabs-vertical-info-settings-tab">
-                                                <h4 class="fw-semibold">Settings Content</h4>
-                                                <p class="fs-sm">
-                                                    Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit.
-                                                </p>
-                                                <p class="fs-sm">
-                                                    Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit.
-                                                </p>
+                                            <div class="col-5">
+                                                <div class="block block-rounded">
+                                                    <div class="block-content">
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Album Adı *
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Album Adı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Versiyon /Alt Yazı
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Versiyon /Alt Yazı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Birincil Sanatçı
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Birincil Sanatçı"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="input-group">Düet
+                                                                <input type="text" class="form-control"
+                                                                       id="songName" required
+                                                                       placeholder="Düet"
+                                                                       name="songName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Tarz</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label"
+                                                                   for="example-select-floating">Tarz</label>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Alt Tarz</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label" for="example-select-floating">Alt
+                                                                Tarz</label>
+                                                        </div>
+                                                        <div class="form-floating mb-4">
+                                                            <select class="form-select" id="example-select-floating"
+                                                                    name="example-select-floating"
+                                                                    aria-label="Floating label select example">
+                                                                <option selected="">Plak Şirketi</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <label class="form-label" for="example-select-floating">Plak
+                                                                Şirketi</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- END Vertical Block Tabs Default Style With Extra Info -->
-                                </div>
 
+                                    </div>
+                                    <div class="tab-pane fade" id="down" role="tabpanel"
+                                         aria-labelledby="down-tab">yüklemek için tıklayınız
+                                    </div>
+                                    <div class="tab-pane fade" id="song" role="tabpanel"
+                                         aria-labelledby="song-tab">...
+                                    </div>
+                                    <div class="tab-pane fade" id="country" role="tabpanel"
+                                         aria-labelledby="country-tab">bölgeler
+                                    </div>
+                                    <div class="tab-pane fade" id="share" role="tabpanel"
+                                         aria-labelledby="share-tab">Yayın Tarihi
+                                    </div>
+                                    <div class="tab-pane fade" id="promosyon" role="tabpanel"
+                                         aria-labelledby="promosyon-tab">promosyon
+                                    </div>
+                                    <div class="tab-pane fade" id="send" role="tabpanel"
+                                         aria-labelledby="send-tab">Gönderim
+                                    </div>
+
+                                    <!-- END Block Tabs -->
+                                </div>
                             </div>
-                        </div>
-                        <button  type="submit" class="btn btn-primary js-click-ripple-enabled" data-toggle="click-ripple"
-                                style="overflow: hidden; position: relative; z-index: 1;">Kaydet
-                        </button>
-                    </form >
+                            <button type="submit" class="btn btn-primary js-click-ripple-enabled"
+                                    data-toggle="click-ripple"
+                                    style="overflow: hidden; position: relative; z-index: 1;">Kaydet
+                            </button>
+                    </form>
                 </div>
             </div>
             <!-- END Basic -->
@@ -143,3 +303,31 @@
 
 @endsection
 
+<script>
+
+
+    function brodcasting() {
+        let test = document.getElementById("test").value;
+        let btitle = document.getElementById('broadcast-title');
+        let btitleone = document.getElementById('broadcast-title-one');
+        let broadCastingStyle = document.getElementById('broadCastingStyle');
+        let broadForm = document.getElementById('broadForm');
+        event.preventDefault();
+        if (test == 'zil') {
+            console.log(test)
+            btitleone.removeAttribute('hidden')
+            btitle.removeAttribute('hidden')
+            broadCastingStyle.style.display = 'none'
+        } else {
+            console.log(test)
+            btitleone.removeAttribute('hidden')
+            btitle.removeAttribute('hidden')
+            broadCastingStyle.style.display = 'block'
+        }
+    }
+
+
+    function stepone() {
+        document.getElementById("broadForm").submit();
+    }
+</script>
