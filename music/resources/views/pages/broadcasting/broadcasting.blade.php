@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div class="content" id="tabMenu" hidden="hidden">
 
 
                                 <!-- Block Tabs -->
@@ -120,48 +120,64 @@
                                                 <div class="block block-rounded">
                                                     <div class="block-content">
                                                         <div class="mb-4">
-                                                            <div class="input-group">Album Adı *
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Album Adı"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
-                                                            <div class="input-group">Versiyon /Alt Yazı
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Versiyon /Alt Yazı"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
-                                                            <div class="input-group">Birincil Sanatçı
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Birincil Sanatçı"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
-                                                            <div class="input-group">Düet
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Düet"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-floating mb-4">
                                                             <select class="form-select" id="example-select-floating"
                                                                     name="example-select-floating"
                                                                     aria-label="Floating label select example">
-                                                                <option selected="">Tarz</option>
+                                                                <option selected=""> Tarz</option>
                                                                 <option value="1">One</option>
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
                                                             </select>
-                                                            <label class="form-label"
-                                                                   for="example-select-floating">Tarz</label>
+                                                            <label class="form-label" for="example-select-floating">
+                                                                Tarz</label>
                                                         </div>
                                                         <div class="form-floating mb-4">
                                                             <select class="form-select" id="example-select-floating"
@@ -194,42 +210,34 @@
                                                 <div class="block block-rounded">
                                                     <div class="block-content">
                                                         <div class="mb-4">
-                                                            <div class="input-group">Album Adı *
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Album Adı"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
-                                                            <div class="input-group">Versiyon /Alt Yazı
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Versiyon /Alt Yazı"
-                                                                       name="songName">
-                                                            </div>
-                                                        </div>
-                                                        <div class="mb-4">
-                                                            <div class="input-group">Birincil Sanatçı
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Birincil Sanatçı"
-                                                                       name="songName">
-                                                            </div>
-                                                        </div>
-                                                        <div class="mb-4">
-                                                            <div class="input-group">Düet
-                                                                <input type="text" class="form-control"
-                                                                       id="songName" required
-                                                                       placeholder="Düet"
-                                                                       name="songName">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-floating mb-4">
                                                             <select class="form-select" id="example-select-floating"
                                                                     name="example-select-floating"
                                                                     aria-label="Floating label select example">
-                                                                <option selected="">Tarz</option>
+                                                                <option selected="">Yapım Yılı</option>
                                                                 <option value="1">One</option>
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
@@ -237,29 +245,41 @@
                                                             <label class="form-label"
                                                                    for="example-select-floating">Tarz</label>
                                                         </div>
-                                                        <div class="form-floating mb-4">
-                                                            <select class="form-select" id="example-select-floating"
-                                                                    name="example-select-floating"
-                                                                    aria-label="Floating label select example">
-                                                                <option selected="">Alt Tarz</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <label class="form-label" for="example-select-floating">Alt
-                                                                Tarz</label>
+                                                        <div class="mb-4">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-floating mb-4">
-                                                            <select class="form-select" id="example-select-floating"
-                                                                    name="example-select-floating"
-                                                                    aria-label="Floating label select example">
-                                                                <option selected="">Plak Şirketi</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <label class="form-label" for="example-select-floating">Plak
-                                                                Şirketi</label>
+                                                        <div class="mb-4">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="form-group row">
+                                                                <label for="songName" class="col-sm-2 ">Album Adı
+                                                                    *</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                           id="songName" required
+                                                                           placeholder="Album Adı"
+                                                                           name="songName">
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -312,12 +332,14 @@
         let btitleone = document.getElementById('broadcast-title-one');
         let broadCastingStyle = document.getElementById('broadCastingStyle');
         let broadForm = document.getElementById('broadForm');
+        let tabMenu = document.getElementById('tabMenu');
         event.preventDefault();
         if (test == 'zil') {
-            console.log(test)
+
             btitleone.removeAttribute('hidden')
             btitle.removeAttribute('hidden')
             broadCastingStyle.style.display = 'none'
+            tabMenu.removeAttribute('hidden')
         } else {
             console.log(test)
             btitleone.removeAttribute('hidden')
